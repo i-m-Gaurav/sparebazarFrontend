@@ -33,7 +33,7 @@ function ManageProducts() {
 	const handleApprove = (productId) => {
 		// Update the approval status in the database
 		axios
-			.post(`http://localhost:4000/approve-product/${productId}`)
+			.post(`https://sparebazar-backend.vercel.app/approve-product/${productId}`)
 			.then((res) => {
 				// Handle success (optional)
 				console.log("Product approved successfully");
@@ -56,7 +56,7 @@ function ManageProducts() {
 	};
 
 	const handleDelete = (pid) => {
-		const url = "http://localhost:4000/delete-product";
+		const url = "https://sparebazar-backend.vercel.app/delete-product";
 		const data = { pid };
 		if (window.confirm("Are you sure you want to delete this product?")) {
 			axios
@@ -87,7 +87,7 @@ function ManageProducts() {
 								className="bg-white shadow-lg rounded-lg overflow-hidden">
 								<img
 									className="w-full h-60 object-cover object-center"
-									src={"http://localhost:4000/" + item.pimage}
+									src={"https://sparebazar-backend.vercel.app/" + item.pimage}
 									alt={item.pname}
 									onError={(e) => (e.target.src = "path/to/placeholder.jpg")}
 								/>
