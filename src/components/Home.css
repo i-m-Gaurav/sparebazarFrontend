@@ -1,0 +1,68 @@
+.icon-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    padding: 7px;
+    background-color: white;
+    margin: 7px;
+    z-index: 2; 
+}
+
+.icons, .red-icons {
+    font-size: 32px;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.icons {
+    color: #ddd;
+}
+
+.icons:hover, .red-icons {
+    color: red;
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card div:not(.icon-container) { 
+    padding: 15px;
+    text-align: center;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.buy-now-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buy-now-button:hover {
+    background-color: #0056b3;
+}
