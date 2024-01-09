@@ -13,7 +13,7 @@ function AdminLogin() {
         e.preventDefault();  // Prevent the default form submit action
         console.log({ username, password });
 
-        const url = 'http://localhost:4000/admin-login';
+        const url = 'https://sparebazar-backend.vercel.app/admin-login';
         const data = { username, password };
 
         axios.post(url, data)

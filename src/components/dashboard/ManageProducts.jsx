@@ -6,7 +6,7 @@ function ManageProducts() {
 	const [products, setproducts] = useState([]);
 
 	const fetchProduct = () => {
-		const url = "http://localhost:4000/get-products";
+		const url = "https://sparebazar-backend.vercel.app/get-products";
 
 		axios
 			.get(url)
