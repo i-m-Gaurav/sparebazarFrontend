@@ -22,7 +22,7 @@ function MyProducts() {
     // }, [])
 
     useEffect(() => {
-        const url = 'http://localhost:4000/my-products';
+        const url = 'https://sparebazar-backend.vercel.app/my-products';
         let data={userId:localStorage.getItem('userId')};
         axios.post(url,data)
             .then((res) => {
@@ -72,7 +72,7 @@ function MyProducts() {
         let userId=localStorage.getItem('userId');
         console.log('userId',"productId",productId,userId);
 
-        const url = 'http://localhost:4000/like-product';
+        const url = 'https://sparebazar-backend.vercel.app/like-product';
         const data={userId,productId};
         axios.post(url,data)
             .then((res) => {
@@ -118,7 +118,7 @@ function MyProducts() {
     // }
 
     const handleDel= (pid) => {
-		const url = "http://localhost:4000/delete-product";
+		const url = "https://sparebazar-backend.vercel.app/delete-product";
 		const data = { pid };
 		if (window.confirm("Are you sure you want to delete this product?")) {
 			axios
@@ -160,7 +160,7 @@ function MyProducts() {
 
                                 </div> */}
                                 
-                                <img width="300px" height="300px" src={'http://localhost:4000/' + item.pimage} />
+                                <img width="300px" height="300px" src={'https://sparebazar-backend.vercel.app/' + item.pimage} />
                                 <p className='p-2'>{item.pname} | {item.category}</p>
                                 <p className='p-2 text-success'>{item.pdesc} </p>
                                 <h3 className='p-2 text-success'>₹{item.price}/- </h3>

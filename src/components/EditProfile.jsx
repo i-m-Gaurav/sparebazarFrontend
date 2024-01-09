@@ -11,7 +11,7 @@ function EditProfile({ user }) {
 
   const handleApi = () => {
     const userId = localStorage.getItem("userId");
-    const url = `http://localhost:4000/edit-profile/${userId}`;
+    const url = `https://sparebazar-backend.vercel.app/edit-profile/${userId}`;
     const data = {
       name,
       phone,

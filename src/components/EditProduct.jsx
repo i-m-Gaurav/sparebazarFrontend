@@ -31,7 +31,7 @@ function EditProduct(){
     },[])
 
     useEffect(() => {
-        const url = 'http://localhost:4000/get-product/' + p.productId;
+        const url = 'https://sparebazar-backend.vercel.app/get-product/' + p.productId;
 
         axios.get(url)
             .then((res) => {
@@ -73,7 +73,7 @@ function EditProduct(){
             formData.append('isSold', isSold);
             formData.append('address',setaddress);
             
-            const url='http://localhost:4000/edit-product';
+            const url='https://sparebazar-backend.vercel.app/edit-product';
             axios.post(url,formData)
             .then((res)=>{
                 console.log(res);
@@ -161,7 +161,7 @@ function EditProduct(){
                      <input className="form-control" type="text" placeholder="Enter the city and state Name" value={address} onChange={(e)=>{setaddress(e.target.value)}} required />
                     <label className='addproduct-label'>Upload Image</label>
                     <input style={{width:'50%'}} className="form-control" type="file" placeholder="Upload Image"   onChange={(e)=>{setpimage(e.target.files[0])}} required />
-                    <img src={'http://localhost:4000/'+poldimage} width={150} height={150}/><br></br>
+                    <img src={'https://sparebazar-backend.vercel.app/'+poldimage} width={150} height={150}/><br></br>
                     <button className="btn btn-primary" onClick={handleApi}>UPDATE</button>
                   
                 {/* </form> */}

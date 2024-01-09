@@ -7,7 +7,7 @@ function ManageUsers() {
 	const [users, setusers] = useState([]);
 
 	const fetchUsers = () => {
-		const url = "http://localhost:4000/get-users";
+		const url = "https://sparebazar-backend.vercel.app/get-users";
 
 		axios
 			.get(url)
@@ -28,7 +28,7 @@ function ManageUsers() {
 	}, []);
 
 	const handleDeleteUser = (uId) => {
-		const url = "http://localhost:4000/delete-user";
+		const url = "https://sparebazar-backend.vercel.app/delete-user";
 		const data = { uId };
 		// Confirmation dialog
 		if (window.confirm("Are you sure you want to delete this user?")) {

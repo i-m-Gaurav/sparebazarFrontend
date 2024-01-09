@@ -15,7 +15,7 @@ function ProductDetail() {
   const p = useParams();
 
   useEffect(() => {
-    socket = io("http://localhost:4000");
+    socket = io("https://sparebazar-backend.vercel.app");
     socket.on("connect", () => {
       console.log("connected");
     });
@@ -34,7 +34,7 @@ function ProductDetail() {
     });
   }, [p.productId]);
   useEffect(() => {
-    const url = "http://localhost:4000/get-product/" + p.productId;
+    const url = "https://sparebazar-backend.vercel.app/get-product/" + p.productId;
     axios
       .get(url)
       .then((res) => {
@@ -60,7 +60,7 @@ function ProductDetail() {
   };
 
   const handleContact = (addedBy) => {
-    const url = "http://localhost:4000/get-user/" + addedBy;
+    const url = "https://sparebazar-backend.vercel.app/get-user/" + addedBy;
     axios
       .get(url)
       .then((res) => {
@@ -91,7 +91,7 @@ function ProductDetail() {
                   <div class="bg-white rounded-lg border border-gray-300">
                     <div class="text-black text-center product-display">
                       <img
-                        src={"http://localhost:4000/" + product.pimage}
+                        src={"https://sparebazar-backend.vercel.app/" + product.pimage}
                         alt={product.pname}
                       />
                     </div>

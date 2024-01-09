@@ -16,7 +16,7 @@ function Signup(){
     const handleApi=()=>{
         console.log({username,password});
  
-        const url='http://localhost:4000/signup';
+        const url='https://sparebazar-backend.vercel.app/signup';
         const data={username,password,name,phone,about};
 
         axios.post(url,data)

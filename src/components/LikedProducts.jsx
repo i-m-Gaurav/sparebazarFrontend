@@ -40,7 +40,7 @@ function LikedProducts() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.post('http://localhost:4000/liked-products', { userId: localStorage.getItem('userId') });
+                const response = await axios.post('https://sparebazar-backend.vercel.app/liked-products', { userId: localStorage.getItem('userId') });
                 setproducts(response.data.products);
                 setLoading(false);
             } catch (error) {
@@ -52,7 +52,7 @@ function LikedProducts() {
         fetchData();
 
         
-        const url2 = 'http://localhost:4000/liked-products';
+        const url2 = 'https://sparebazar-backend.vercel.app/liked-products';
         let data = { userId: localStorage.getItem('userId') }
         axios.post(url2, data)
             .then((res) => {
@@ -120,7 +120,7 @@ function LikedProducts() {
 
         console.log('userId', "productId", productId, userId);
 
-        const url = 'http://localhost:4000/dislike-product';
+        const url = 'https://sparebazar-backend.vercel.app/dislike-product';
         const data = { userId, productId };
         axios.post(url, data)
             .then((res) => {
@@ -167,7 +167,7 @@ function LikedProducts() {
 
                                 </div>
                                 
-                                <img width="300px" height="300px" src={'http://localhost:4000/' + item.pimage} />
+                                <img width="300px" height="300px" src={'https://sparebazar-backend.vercel.app/' + item.pimage} />
                                 <p className='p-2'>{item.pname} | {item.category}</p>
                                 <p className='p-2 text-success'>{item.pdesc} </p>
                                 <h3 className='p-2 text-success'>₹{item.price}/- </h3>

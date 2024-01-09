@@ -118,7 +118,7 @@ function MyProfile() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        let url = 'http://localhost:4000/my-profile/' + localStorage.getItem('userId');
+        let url = 'https://sparebazar-backend.vercel.app/my-profile/' + localStorage.getItem('userId');
         axios.get(url)
             .then((res) => {
                 if (res.data.message === 'success') {
