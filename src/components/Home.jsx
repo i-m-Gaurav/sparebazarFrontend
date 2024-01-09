@@ -15,7 +15,7 @@ function Home() {
 	const [issearch, setissearch] = useState(false);
 
 	useEffect(() => {
-		const url = "http://localhost:4000/get-products";
+		const url = "https://sparebazar-backend.vercel.app/get-products";
 
 		axios
 			.get(url)
