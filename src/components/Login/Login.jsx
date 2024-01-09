@@ -13,7 +13,7 @@ function Login() {
     const handleApi = () => {
         console.log({ username, password });
 
-        const url = 'http://localhost:4000/login';
+        const url = 'https://sparebazar-backend.vercel.app/login';
         const data = { username, password };
 
         axios.post(url, data)

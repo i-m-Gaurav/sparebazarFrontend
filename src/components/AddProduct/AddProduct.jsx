@@ -47,7 +47,7 @@ function AddProduct(){
             formData.append('address',address);
 
             
-            const url='http://localhost:4000/add-product';
+            const url='https://sparebazar-backend.vercel.app/add-product';
             axios.post(url,formData)
             .then((res)=>{
                 console.log(res);
